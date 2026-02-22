@@ -17,7 +17,8 @@ function App() {
   // const { remove, setValue2, value } = useSessionStorageState("kohelet", "hagay")
   // const { current, previousValue, setCurrent, setValues } = usePrevious()
   // const { debounce, value } = useDebouncedValue("hagay", 5000)
-  const {setInterval} = useInterval(console.log("hello"), 1000)
+  // const {setInterval} = useInterval(console.log("hello"), 1000)
+  const{useEffect} = useInterval(console.log("here"), 1000, "adsf")
   return (
     <>
       {/* <button onClick={inc}>increamant</button>
@@ -42,10 +43,11 @@ function App() {
 
       {/* <p>{value}</p>
       <input type="text" onKeyUp={debounce} /> */}
-      <button onClick={()=>{
+      {/* <button onClick={()=>{
         console.log("here");
-      }}>click</button>
-    </>
+      }}>click</button> */}
+      <button onClick={useEffect}>click here</button> 
+      </>
  )
 }
 
