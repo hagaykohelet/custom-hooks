@@ -1,6 +1,7 @@
 // import { useState } from 'react'
 import './App.css'
 import useDebouncedValue from './hooks/useDebouncedValue'
+import useInterval from './hooks/useInterval'
 import usePrevious from './hooks/usePrevious'
 // import useCounterWithStep from './hooks/useCounterWithStep'
 // import useInput from './hooks/useInput'
@@ -15,7 +16,8 @@ function App() {
   // const {onChange,reset,setValue,value} = useInput()
   // const { remove, setValue2, value } = useSessionStorageState("kohelet", "hagay")
   // const { current, previousValue, setCurrent, setValues } = usePrevious()
-  const { debounce, value } = useDebouncedValue("hagay", 5000)
+  // const { debounce, value } = useDebouncedValue("hagay", 5000)
+  const {setInterval} = useInterval(console.log("hello"), 1000)
   return (
     <>
       {/* <button onClick={inc}>increamant</button>
@@ -38,10 +40,13 @@ function App() {
       {/* <input type="text" onChange={setValues} />
       <p>previous: {previousValue}</p> */}
 
-      <p>{value}</p>
-      <input type="text" onKeyUp={debounce} />
+      {/* <p>{value}</p>
+      <input type="text" onKeyUp={debounce} /> */}
+      <button onClick={()=>{
+        console.log("here");
+      }}>click</button>
     </>
-  )
+ )
 }
 
 export default App
